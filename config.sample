@@ -1,0 +1,9 @@
+# folder '~/foo' do
+#   glob '*.pdf', '~/Documents'
+#   regex 'CIMG\d+.JPG', 'rename and move to ~/Pictures' do |filename|
+#     new_filename = filename.gsub(/\.JPG$/, '.jpg')
+#     FileUtils.mv filename, File.join(File.expand_path('~/Pictures'), new_filename)
+#   end
+# end
+
+# vim: syntax=ruby

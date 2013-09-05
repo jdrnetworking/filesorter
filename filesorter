@@ -1,0 +1,26 @@
+#!/usr/bin/env ruby
+
+require 'rubygems'
+ENV['BUNDLE_GEMFILE'] ||= File.expand_path('../Gemfile', __FILE__)
+require 'bundler/setup' if File.exists?(ENV['BUNDLE_GEMFILE'])
+Bundler.require(:default) if defined?(Bundler)
+
+require 'optparse'
+require_relative 'file_sorter/file_sorter.rb'
+
+if $0 == __FILE__
+  options = {}
+  OptionParser.new do |opts|
+    opts.banner  = "Usage: filesorter.rb [options]"
+
+    opts.on('-n', '--dry-run', 'Dry run') do |dry_run|
+      options[:dry_run] = dry_run
+    end
+
+    opts.on('-v', '--verbose', 'Verbose') do |verbose|
+      options[:verbose] = verbose
+    end
+  end.parse!
+
+  FileSorter::FileSorter.new(options).sort!
+end
