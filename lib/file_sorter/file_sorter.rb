@@ -16,8 +16,8 @@ module FileSorter
       relevant_files.each do |filename|
         matcher = matcher_for(filename)
         next unless matcher
-        puts "Handling #{filename} with #{matcher}" if verbose?
-        matcher.handle(filename) unless options[:dry_run]
+        puts "Handling #{filename} with #{matcher}" if verbose? or dry_run?
+        matcher.handle(filename) unless dry_run?
       end
     end
 
@@ -41,6 +41,10 @@ module FileSorter
 
     def verbose?
       options[:verbose]
+    end
+
+    def dry_run?
+      options[:dry_run]
     end
   end
 end
