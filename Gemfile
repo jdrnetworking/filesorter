@@ -1,5 +1,5 @@
-gem 'activesupport', '3.2.14'
-gem 'pry'
-gem 'pry-debugger'
-gem 'tconsole', '1.3.0.pre2'
+source 'https://rubygems.org'
+
 gem 'mocha', require: false
+
+gemspec

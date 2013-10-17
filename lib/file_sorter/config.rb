@@ -1,5 +1,5 @@
-require_relative 'glob_matcher.rb'
-require_relative 'regex_matcher.rb'
+require_relative 'glob_matcher'
+require_relative 'regex_matcher'
 
 module FileSorter
   class Config

@@ -1,4 +1,4 @@
-require_relative 'matcher.rb'
+require_relative 'matcher'
 
 module FileSorter
   class GlobMatcher < Matcher

@@ -1,4 +1,5 @@
+$LOAD_PATH.unshift File.expand_path('../../lib', __FILE__)
+require 'file_sorter'
 require 'active_support/test_case'
-require_relative '../file_sorter.rb'
 require 'mocha/setup'
 require 'minitest/autorun'

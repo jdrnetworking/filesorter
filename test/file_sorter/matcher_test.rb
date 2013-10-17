@@ -1,4 +1,4 @@
-require 'test_helper.rb'
+require 'minitest_helper.rb'
 
 module FileSorter
   class MatcherTest < ActiveSupport::TestCase

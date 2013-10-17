@@ -1,4 +1,4 @@
-require_relative 'config.rb'
+require_relative 'config'
 
 module FileSorter
   class FileSorter
@@ -35,7 +35,7 @@ module FileSorter
 
     def default_options
       {
-        config_file: File.expand_path('../../config', __FILE__)
+        config_file: File.expand_path('~/.filesorter')
       }
     end
 
